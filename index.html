@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlazando el archivo CSS -->
+</head>
+<body>
+    <!-- Modal de Login -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Usuario</label>
+                    <input type="text" placeholder="Ingrese su usuario">
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" placeholder="Ingrese su contraseña">
+                </div>
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    <button type="button" class="btn btn-secondary" id="guestButton">Iniciar como Cliente</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Banner de Envíos -->
+    <div class="shipping-banner">
+        Envíos gratuitos hasta el 4to anillo desde 100 Bs en adelante
+    </div>
+    <hr>
+
+    <!-- Navegación Principal -->
+    <nav class="main-nav">
+    <ul class="nav-links">
+        <li><a href="#">TIENDA</a></li>
+        <li><a href="#">CLUB DE CONFORT</a></li>
+        <li><a href="#">BUSCADOR DE TONOS</a></li>
+        <li><a href="#">IMPACTO</a></li>
+        <li><a href="#">ASISTENCIA</a></li>
+    </ul>
+    <div class="search-container">
+        <input type="text" placeholder="Busca productos..." class="search-input">
+        <button class="btn btn-search">Buscar</button>
+        <button class="btn btn-cart" id="cartButton">
+            <img src="carrito.png" alt="Carrito" class="cart-icon">
+        </button>
+    </div>
+</nav>
+
+
+
+
+    <!-- Sección Hero -->
+    <section class="hero-section">
+    <div class="hero-card">
+        <img src="perfume\generico1.jpg" alt="Perfumes" class="hero-image">
+        <div class="hero-content">
+            <h2>PERFUMES</h2>
+            <p>Descubre nuestra exclusiva colección de fragancias que te transportarán a un mundo de sensaciones únicas.</p>
+            <a href="#perfumes" class="btn btn-hero">Comprar ahora</a> <!-- Cambiado a btn-hero -->
+        </div>
+    </div>
+    <div class="hero-card">
+        <img src="skincare\generico1.png" alt="Skin Care" class="hero-image">
+        <div class="hero-content">
+            <h2>SKIN CARE</h2>
+            <p>Cuida tu piel con nuestra línea premium de productos para el cuidado facial y corporal.</p>
+            <a href="#skincare" class="btn btn-hero">Comprar ahora</a> <!-- Cambiado a btn-hero -->
+        </div>
+    </div>
+    <div class="hero-card">
+        <img src="makeup\generico1.jpg" alt="Maquillaje" class="hero-image">
+        <div class="hero-content">
+            <h2>MAQUILLAJE</h2>
+            <p>Realza tu belleza natural con nuestra colección de maquillaje profesional, luce bien en todas partes</p>
+            <a href="#maquillaje" class="btn btn-hero">Comprar ahora</a> <!-- Cambiado a btn-hero -->
+        </div>
+    </div>
+</section>
+
+
+    <!-- Sección de Perfumes -->
+<section id="perfumes" class="products-section">
+    <h2>PERFUMES</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="perfume/perfum1.jpg" alt="Olympéa">
+            <h3>Olympéa</h3>
+            <div class="product-details">Poder femenino cautivador</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="perfume/perfum2.jpg" alt="Moncler Sunrise">
+            <h3>Moncler Sunrise</h3>
+            <div class="product-details">Fragancia floral amaderada</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="perfume/perfum3.jpg" alt="Good Girl Blush">
+            <h3>Good Girl</h3>
+            <div class="product-details">Interpretación sensual intensa</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="perfume/perfum4.jpg" alt="Q by D&G">
+            <h3>Q D&G</h3>
+            <div class="product-details">Notas florales y frutales</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="perfume/perfum5.jpg" alt="Good Girl">
+            <h3>Good Girl</h3>
+            <div class="product-details">Dualidad de la mujer moderna</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="perfume/perfum6.jpg" alt="Flower by Kenzo">
+            <h3>Flower Kenzo</h3>
+            <div class="product-details">Amapola urbana radiante</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="perfume/perfum7.jpg" alt="Million Gold">
+            <h3>Million Gold</h3>
+            <div class="product-details">Dualidad floral innovadora</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="perfume/perfum8.jpg" alt="212 VIP Rosé">
+            <h3>212 VIP</h3>
+            <div class="product-details">Interpretación sensual intensa</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="perfume/perfum9.jpg" alt="J'adore">
+            <h3>J'adore</h3>
+            <div class="product-details">Gran floral femenino</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="perfume/perfum10.jpg" alt="L'Interdit">
+            <h3>L'Interdit</h3>
+            <div class="product-details">Fragancia audaz y única</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="perfume/perfum11.jpg" alt="Miss Dior">
+            <h3>Miss Dior</h3>
+            <div class="product-details">Frasco fresco y tierno</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="perfume/perfum12.jpg" alt="Queen Of Seduction">
+            <h3>Queen Seduction</h3>
+            <div class="product-details">Belleza y encanto natural</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="skincare" class="products-section">
+    <h2>SKINCARE</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="skincare/skin1.jpg" alt="Brocha para polvos">
+            <h3>Brocha para polvos</h3>
+            <div class="product-details">Aplicación precisa y esponjosa</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="skincare/skin2.jpg" alt="Prebase de ojos">
+            <h3>Prebase de ojos</h3>
+            <div class="product-details">Hidrata y prepara párpados</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="skincare/skin3.jpg" alt="Papel secante Blot & Glow">
+            <h3>Papel secante Blot & Glow</h3>
+            <div class="product-details">Absorbe grasa, mantiene maquillaje</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="skincare/skin4.jpg" alt="Parches hidratantes">
+            <h3>Parches hidratantes</h3>
+            <div class="product-details">Hidrata y suaviza la piel</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="skincare/skin5.jpg" alt="Bolígrafo de aromaterapia">
+            <h3>Bolígrafo aromaterapia</h3>
+            <div class="product-details">Aroma relajante a menta</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="skincare/skin6.jpg" alt="Spray 4 en 1">
+            <h3>Spray 4 en 1</h3>
+            <div class="product-details">Hidrata, fija y refresca</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="skincare/skin7.jpg" alt="Fragancia en bruma">
+            <h3>Fragancia en bruma</h3>
+            <div class="product-details">Revitaliza cuerpo y cabello</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="skincare/skin8.jpg" alt="Prebase difusora">
+            <h3>Prebase difusora</h3>
+            <div class="product-details">Suaviza poros y líneas finas</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="skincare/skin9.jpg" alt="Primer iluminador">
+            <h3>Primer iluminador</h3>
+            <div class="product-details">Hidrata e ilumina la piel</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="skincare/skin10.jpg" alt="Loción corporal">
+            <h3>Loción corporal</h3>
+            <div class="product-details">Hidrata hasta 24 horas</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="skincare/skin11.jpg" alt="Crema hidratante">
+            <h3>Crema hidratante</h3>
+            <div class="product-details">Hidrata hasta 16 horas</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="skincare/skin12.jpg" alt="Gel de baño exfoliante">
+            <h3>Gel de baño exfoliante</h3>
+            <div class="product-details">Exfolia con aroma cítrico</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                    <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="maquillaje" class="products-section">
+    <h2>MAQUILLAJE</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="makeup/makeup1.jpg" alt="Polvos compactos True to Myself">
+            <h3>Polvos Compactos</h3>
+            <div class="product-details">Difumina, suaviza y fija maquillaje</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="makeup/makeup2.jpg" alt="Máscara Perfect Stroker">
+            <h3>Máscara Voluminizadora</h3>
+            <div class="product-details">Levanta y alarga pestañas</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="makeup/makeup3.jpg" alt="Aceite labial Soft Pinch">
+            <h3>Aceite Labial</h3>
+            <div class="product-details">Brillante y cómodo todo el día</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="makeup/makeup4.jpg" alt="Polvos fijadores Always an Optimist">
+            <h3>Polvos Fijadores</h3>
+            <div class="product-details">Suaviza y controla el brillo</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="makeup/makeup5.jpg" alt="Lápiz labial mate Kind Words">
+            <h3>Lápiz Labial Mate</h3>
+            <div class="product-details">Cremoso y rico en pigmentos</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="makeup/makeup6.jpg" alt="Rubor Derritiéndose">
+            <h3>Rubor en Crema</h3>
+            <div class="product-details">Se funde como segunda piel</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="makeup/makeup7.jpg" alt="Delineador labial Kind Words">
+            <h3>Delineador Labial</h3>
+            <div class="product-details">Color intenso y duradero</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="makeup/makeup8.jpg" alt="Bronceador en barra Warm Wishes">
+            <h3>Bronceador en Barra</h3>
+            <div class="product-details">Brillo bronceado instantáneo</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="makeup/makeup9.jpg" alt="Lápiz de precisión Brow Harmony">
+            <h3>Lápiz de Precisión</h3>
+            <div class="product-details">Trazos precisos y naturales</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="makeup/makeup10.jpg" alt="Iluminador de ojos Positive Light">
+            <h3>Iluminador de Ojos</h3>
+            <div class="product-details">Hidratante y radiante</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="makeup/makeup11.jpg" alt="Iluminador líquido de luz positiva">
+            <h3>Iluminador Líquido</h3>
+            <div class="product-details">Brillo modulable y nutriente</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="makeup/makeup12.jpg" alt="Rubor líquido suave">
+            <h3>Rubor Líquido</h3>
+            <div class="product-details">Ligero y duradero</div>
+            <div class="btn-group">
+                <a href="https://wa.me/59178956127" class="whatsapp-button">
+                <img src="iconwssp.png" alt="WhatsApp"></a>
+                <button class="btn btn-cart">Añadir a la cesta</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+	<script src="script.js"></script>
+</body>
+<footer class="footer">
+    <p>Todos los derechos reservados &copy; 2024 - Estudiantes: Paz Uribe Jesus Pablo y Cayo M. Daniela</p>
+</footer>
+
+</html>

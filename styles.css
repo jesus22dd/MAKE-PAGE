@@ -1,0 +1,436 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+        }
+
+        /* Modal Login - Enhanced styling */
+        .modal {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .modal.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.95);
+        }
+
+        .modal-content {
+            background: rgba(255,255,255,0.95);
+            padding: 2.5rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 0.5rem;
+            border: 2px solid rgba(128, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #800000;
+            box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+			
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #800000 0%, #a00000 100%);
+            color: white;
+			
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
+			
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+        }
+
+        /* Enhanced Header Shipping */
+        .shipping-banner {
+			background: linear-gradient(135deg, rgba(255, 182, 193, 0.8) 0%, rgba(255, 105, 180, 0.9) 100%); /* Rosado suave (pinkie) */
+			color: white;
+			text-align: center;
+			padding: 0.8rem;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+
+        /* Enhanced Navigation */
+        .main-nav {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            position: relative;
+            padding: 0.3rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #800000;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #800000;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Enhanced Hero Section */
+        .hero-section {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+			background-color: #f5e6e8
+        }
+
+        .hero-card {
+			flex: 1;
+			min-width: 300px;
+			max-width: 350px; /* Ajuste de ancho */
+			background: white;
+			border-radius: 15px;
+			overflow: hidden;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+			transition: all 0.3s ease;
+		}
+        .hero-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .hero-image {
+			width: 100%;
+			height: 500px; /* Ajuste de altura */
+			object-fit: cover;
+			transition: all 0.3s ease;
+		}
+
+        .hero-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hero-content h2 {
+            color: #800000;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content p {
+            color: #666;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        /* Enhanced Products Section */
+        .products-section {
+            padding: 3rem 2rem;
+            scroll-margin-top: 100px;
+        }
+
+        .products-section h2 {
+            text-align: center;
+            color: #800000;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .products-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: #800000;
+            border-radius: 2px;
+        }
+
+        .products-grid {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr); /* Seis columnas */
+			gap: 1rem;
+			margin-top: 2rem;
+		}
+
+        .product-card {
+			background: white;
+			border-radius: 12px;
+			padding: 1rem;
+			text-align: center;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+			transition: all 0.3s ease;
+			position: relative;
+			overflow: hidden;
+		}
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+			object-fit: cover;
+		}
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-card h3 {
+            margin: 1rem 0;
+            color: #333;
+        }
+
+        .add-to-cart {
+            background: linear-gradient(135deg, #800000 0%, #a00000 100%);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            margin-top: 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .hero-card {
+                max-width: calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-card {
+                max-width: 100%;
+            }
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+        }
+		.whatsapp-button {
+			display: inline-block;       /* Permite el comportamiento de botón */
+			text-decoration: none;      /* Elimina el subrayado del enlace */
+			padding: 0;                 /* Elimina el espaciado alrededor */
+		}
+
+		.whatsapp-button img {
+			width: 40px;                /* Ajusta el tamaño de la imagen según tus necesidades */
+			height: 40px;               /* Ajusta el tamaño de la imagen según tus necesidades */
+			vertical-align: middle;     /* Alinea verticalmente la imagen */
+		}
+
+		.whatsapp-button:hover {
+			background-color: #128C7E; /* Color de fondo al pasar el ratón */
+		}
+		.btn-hero {
+			background-color: #ff6f91; /* Color de fondo rosado */
+			color: white; /* Color del texto */
+		}
+
+		.btn-hero:hover {
+			background-color: #ff4f6d; /* Color al pasar el mouse */
+		}
+.main-nav {
+    display: flex; /* Usa flexbox para alinear elementos en fila */
+    align-items: center; /* Alinea verticalmente el contenido al centro */
+    justify-content: center; /* Centra todos los elementos dentro de la barra */
+    background-color: #ffffff; /* Color de fondo de la navegación */
+    padding: 10px 20px; /* Espaciado interno de la navegación */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para la barra */
+}
+
+.nav-links {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Alinea los elementos de la lista en fila */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina espaciado interno */
+    justify-content: center; /* Centra los enlaces en la barra */
+}
+
+.nav-links li {
+    margin: 0 20px; /* Espacio entre los elementos de la lista */
+}
+
+.nav-links a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #333; /* Color del texto de los enlaces */
+    font-weight: bold; /* Negrita para los enlaces */
+}
+
+.search-container {
+    display: flex; /* Usa flexbox para alinear el input y el botón en fila */
+    align-items: center; /* Alinea verticalmente el input y el botón al centro */
+    margin-left: 20px; /* Espacio a la izquierda del contenedor de búsqueda */
+}
+
+.search-input {
+    width: 200px; /* Ajusta el ancho del campo de búsqueda */
+    padding: 8px; /* Espaciado interno del input */
+    font-size: 14px; /* Tamaño de fuente del input */
+    border: 2px solid #ff6f91; /* Borde rosado */
+    border-radius: 5px 0 0 5px; /* Bordes redondeados en la izquierda */
+    outline: none; /* Elimina el borde por defecto */
+    transition: border-color 0.3s; /* Transición para el borde */
+}
+
+.btn-search {
+    padding: 8px 12px; /* Ajusta el espaciado interno del botón */
+    font-size: 14px; /* Tamaño de fuente del botón */
+    background-color: #ff6f91; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 0 5px 5px 0; /* Bordes redondeados en la derecha */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición para el color de fondo */
+}
+
+.btn-search:hover {
+    background-color: #ff4f6d; /* Color al pasar el mouse */
+}
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    height: 40px; /* Altura del input */
+}
+
+.btn-cart {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 10px; /* Espacio entre el botón de buscar y el carrito */
+}
+
+.cart-icon {
+    width: auto; /* Mantener proporción */
+    height: 80%; /* Ajusta la altura para que sea más pequeña */
+    max-height: 32px; /* Máximo que puede tener el ícono */
+    max-width: 100%; /* Evita que el ícono exceda el ancho del botón */
+}
+.footer {
+    background-color: #EAB8B8; /* Color rosado más oscuro sin transparencia */
+    color: #fff; /* Color del texto en blanco para mayor contraste */
+    text-align: center; /* Centrar texto */
+    padding: 10px 0; /* Espacio arriba y abajo */
+    position: fixed; /* Fijo en la parte inferior */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Asegura que esté en la parte inferior */
+    z-index: 1000; /* Asegura que se mantenga encima de otros elementos */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+
